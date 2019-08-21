@@ -4,20 +4,25 @@ body{
 	background: #f5f5f5;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	line-height: 1.4em;
+	font-weight: 300;
 }
 .todo-main-app{
 	margin: 0 auto;
 	width: 40%;
+
 }
 .todo-main-app  .app-header {
 	color: rgba(175, 47, 47, 0.15);
 	font-size: 100px;
 	text-align: center;
 	font-weight: 100;
+	text-rendering: optimizeLegibility;
 }
 .todos-section{
 	box-shadow: 1px 2px 2px #bfbfbf;
 	background: #fff;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
+	            0 25px 50px 0 rgba(0, 0, 0, 0.1);
 }
 footer{
 	color: #bfbfbf;
@@ -43,6 +48,11 @@ footer{
 	display: flex;
 	flex-wrap: wrap;
 	padding: 10px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2),
+	            0 8px 0 -3px #f6f6f6,
+	            0 9px 1px -3px rgba(0, 0, 0, 0.2),
+	            0 16px 0 -6px #f6f6f6,
+	            0 17px 2px -6px rgba(0, 0, 0, 0.2);
 }
 .items-left{
 	flex: 0 0 20%;
@@ -91,7 +101,24 @@ footer{
 	height: 30px;
 	width: 30px;
 	border-radius: 50%;
-	background: #eee;
+	border: 1px solid  #eee;
+	background: #fff;
+}
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+/* Style the checkmark/indicator */
+.container .checkmark:after{
+	left: 9px;
+	top: 5px;
+	width: 5px;
+	height: 10px;
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	transform: rotate(45deg);
 }
 .todos-status-items > ul > li:hover{
 	border: 1px solid rgba(175, 47, 47, 0.15);
@@ -120,8 +147,8 @@ footer{
 	text-decoration: underline;
 }
 ::placeholder {
-	color: #ededed;
-	font-weight: lighter;
+	color: #e6e6e6;
+	font-weight: 300;
 	font-style: italic;
 	font-size: 24px;
 }
@@ -139,8 +166,10 @@ footer{
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
+
 	min-height: 60px;
 }
+
 .todo-list  > li {
     border-bottom: 1px solid #ededed;
     width: 100%;
