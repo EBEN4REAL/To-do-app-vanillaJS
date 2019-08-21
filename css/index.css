@@ -1,0 +1,139 @@
+
+body{
+	font-size: 14px;
+	background: #f5f5f5;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	line-height: 1.4em;
+}
+.todo-main-app{
+	margin: 0 auto;
+	width: 40%;
+}
+.todo-main-app  .app-header {
+	color: rgba(175, 47, 47, 0.15);
+	font-size: 100px;
+	text-align: center;
+	font-weight: 100;
+}
+.todos-section{
+	box-shadow: 1px 2px 2px #bfbfbf;
+	background: #fff;
+}
+footer{
+	color: #bfbfbf;
+	text-align: center;
+	font-size: 10px;
+	margin-top: 50px;
+}
+.todos-input-section{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;  /*aligns items vertically using flexbox*/
+	border-bottom: 1px solid #bfbfbf;
+	padding: 10px;
+}
+.input-tag{
+	flex: 0 0 1%;
+}
+.input-tag input {
+	margin: 0;
+}
+.todos-status{
+	flex: 0 0 93%;
+	display: flex;
+	flex-wrap: wrap;
+}
+.items-left{
+	flex: 0 0 20%;
+	color: #777777;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.items-left-content {
+	margin: 
+}
+.todos-status-items{
+	flex: 0 0 50%;
+	padding-top: 10px; 
+}
+.todos-status-items > ul {
+	list-style-type: none;
+	margin: 0;
+}
+.todos-status-items > ul > li {
+	text-decoration: none;
+	display: inline-block;
+	margin-right: 10px;
+	padding: 5px;
+	border-radius: 3px;
+}
+.todos-status-items > ul > li:hover{
+	border: 1px solid rgba(175, 47, 47, 0.15);
+}
+.active {
+	border: 1px solid rgba(175, 47, 47, 0.15);
+}
+.todos-status-items > ul > li:nth-child(1) {
+	padding: 3px 7px 3px 7px;
+}
+.todos-status-items > ul > li > a {
+	text-decoration: none;
+	color: #777777;
+}
+.clear-completed-todos{
+	flex: 0 0 20%;
+	padding-top: 10px; 
+	color: #777777;
+	font-size: 14px;
+}
+::placeholder {
+	color: #ededed;
+	font-weight: lighter;
+	font-style: italic;
+	font-size: 24px;
+}
+[todo-input-field] {
+	border: none;
+	outline: none;
+	width: 100%;
+    background: rgba(0, 0, 0, 0.003);
+    padding: 16px 150px 16px 20px;
+}
+
+.todo-list{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.todo-list  > li {
+    border-bottom: 1px solid #ededed;
+    width: 100%;
+    padding: 5px;
+}
+.todo-list > li > input[type="checkbox"] {
+
+}
+.todo-list-status-indicator{
+	flex: 0 0 9%;
+	padding: 10px;
+	align-items: center;
+	width: 50px;
+	height:50px;
+	border: 1px solid #bfbfbf;
+}
+.todo-list-item{
+	flex: 0 0 80%;
+	align-items: center;
+	padding: 10px;
+}
+
+
+@media only screen and (max-width: 1039px) {
+	.todo-main-app {
+		margin: 0 auto;
+		width: 80%;
+	}
+}
