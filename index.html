@@ -21,14 +21,14 @@
 			<div class="todo-list-section">
 				<ul class="todo-list">
 					<li>
-						<div>
-							<section>
-								<div class="roundedOne">
-									<input type="checkbox" value="none" id="roundedOne" name="check">
-								</div>
-							</section>
+						<!-- <div>
+							<input type="checkbox" data-status-checkbox />
 							<label>Code JSX</label>
-						</div>
+						</div> -->
+						<label class="container">
+							<input type="checkbox" checked="checked">
+							<span class="checkmark"></span>
+						</label>
 						
 					</li>
 				</ul>
@@ -47,7 +47,10 @@
 					</ul>
 				</div>
 				<div class="clear-completed-todos">
-					Clear completed
+					<div class="complete-todos">
+						<a href="">Clear completed</a>
+					</div>
+					
 				</div>
 			</div>
 		</div>

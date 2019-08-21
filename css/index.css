@@ -42,20 +42,20 @@ footer{
 	flex: 0 0 93%;
 	display: flex;
 	flex-wrap: wrap;
+	padding: 10px;
 }
 .items-left{
 	flex: 0 0 20%;
 	color: #777777;
 	display: flex;
 	align-items: center;
-	justify-content: center;
 }
-.items-left-content {
-	margin: 
-}
+
 .todos-status-items{
-	flex: 0 0 50%;
-	padding-top: 10px; 
+	flex: 0 0 50%; 
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .todos-status-items > ul {
 	list-style-type: none;
@@ -64,9 +64,34 @@ footer{
 .todos-status-items > ul > li {
 	text-decoration: none;
 	display: inline-block;
-	margin-right: 10px;
+	margin-right: 8px;
 	padding: 5px;
 	border-radius: 3px;
+}
+/*checkbox section*/
+.container{
+	display: block;
+	position: relative;
+	cursor: pointer;
+
+}
+/* Hide the browser's default checkbox */
+.container input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+/* Create a custom checkbox */
+.checkmark {
+	position: absolute;
+	top: 10px;
+	left: 0;
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	background: #eee;
 }
 .todos-status-items > ul > li:hover{
 	border: 1px solid rgba(175, 47, 47, 0.15);
@@ -74,18 +99,25 @@ footer{
 .active {
 	border: 1px solid rgba(175, 47, 47, 0.15);
 }
-.todos-status-items > ul > li:nth-child(1) {
-	padding: 3px 7px 3px 7px;
-}
 .todos-status-items > ul > li > a {
 	text-decoration: none;
 	color: #777777;
 }
 .clear-completed-todos{
 	flex: 0 0 20%;
-	padding-top: 10px; 
 	color: #777777;
 	font-size: 14px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+
+}
+ .clear-completed-todos a{
+	color: #777777;
+	text-decoration: none;
+}
+.clear-completed-todos a:hover{
+	text-decoration: underline;
 }
 ::placeholder {
 	color: #ededed;
@@ -107,6 +139,7 @@ footer{
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
+	min-height: 60px;
 }
 .todo-list  > li {
     border-bottom: 1px solid #ededed;
@@ -135,5 +168,17 @@ footer{
 	.todo-main-app {
 		margin: 0 auto;
 		width: 80%;
+	}
+}
+@media only screen and (max-width: 703px) {
+	.todo-main-app {
+		margin: 0 auto;
+		width: 90%;
+	}
+}
+@media only screen and (max-width: 624px) {
+	.todo-main-app {
+		margin: 0 auto;
+		width: 100%;
 	}
 }
